@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherstar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="gradient-bg">
+        <div class="gradient-circle c1"></div>
+        <div class="gradient-circle c2"></div>
+        <div class="gradient-circle c3"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar left-sidebar">
+            <div class="brand">
+                <i class="fas fa-cloud-sun"></i>
+                <h1>WeatherStar</h1>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Enter city name...">
+                <button type="button">Search</button>
+            </div>
+            <h2 class="city-name"></h2>
+
+            <nav class="nav-menu">
+                <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <!-- <a href="#"><i class="fas fa-map-marker-alt"></i> Map View</a> -->
+                <a href="#"><i class="fas fa-chart-line"></i> Statistics</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+
+            <!-- <div class="recent-locations">
+                <h3>Recent Locations</h3>
+                <div class="location-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>New York, US</span>
+                    <span class="temp">24°C</span>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>London, UK</span>
+                    <span class="temp">18°C</span>
+                </div>
+            </div> -->
+        </aside>
+
+        
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Weather Dashboard</h2>
+                <div class="header-controls">
+                    <button class="refresh-btn"><i class="fas fa-sync-alt"></i></button>
+                    <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                </div>
+            </header>
+
+            <div class="current-weather-card">
+                <div class="weather-main">
+                    <div class="weather-info">
+                        <h3>Current Weather</h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>--</span>
+                        </div>
+                        <div class="temperature">
+                            <span class="temp-value">--°</span>
+                            <span class="temp-unit">C</span>
+                        </div>
+                        <div class="weather-desc">--</div>
+                    </div>
+                    <div class="weather-icon">
+                        <!-- <img src="/api/placeholder/150/150" alt="Weather Icon"> -->
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div class="detail-info">
+                            <span class="label">Humidity</span>
+                            <span class="value">--</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="detail-info">
+                            <span class="label">Wind Speed</span>
+                            <span class="value">--</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compress-alt"></i>
+                        <div class="detail-info">
+                            <span class="label">Pressure</span>
+                            <span class="value">--</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-eye"></i>
+                        <div class="detail-info">
+                            <span class="label">Visibility</span>
+                            <span class="value">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card aqi-card">
+                    <h3>Air Quality Index</h3>
+                    <div class="aqi-display">
+                        <canvas></canvas>
+                    </div>
+                </div>
+
+                <div class="metric-card temperature-card">
+                    <h3>Temperature Trend</h3>
+                    <div class="temp-chart">
+                        <canvas></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar right-sidebar">
+            <div class="sun-card">
+                <h3>Sunrise & Sunset</h3>
+                <!-- <div class="sun-viz">
+                    <div class="sun-arc">
+                        <div class="sun-position"></div>
+                    </div> -->
+                    <div class="sun-times">
+                        <div class="sunrise">
+                            <i class="fas fa-sunrise"></i>
+                            <span>--</span>
+                        </div>
+                        <div class="sunset">
+                            <i class="fas fa-sunset"></i>
+                            <span>--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- div class="uv-card">
+                <h3>UV Index</h3>
+                <div class="uv-display">
+                    <div class="uv-value">3.5</div>
+                    <div class="uv-label">Moderate</div>
+                </div>
+                <div class="uv-scale">
+                    <div class="scale-bar" style="width: 35%"></div>
+                </div>
+            </div> -->
+
+            <div class="forecast-card">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-list">
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="watermark">
+        Created with ❤️ by
+        <a href="">SGcpu</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
