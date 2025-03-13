@@ -57,7 +57,7 @@
             </div> -->
         </aside>
 
-
+        
         <main class="main-content">
             <header class="main-header">
                 <h2>Weather Dashboard</h2>
@@ -143,20 +143,20 @@
                     <div class="sun-arc">
                         <div class="sun-position"></div>
                     </div> -->
-                <div class="sun-times">
-                    <div class="sunrise">
-                        <i class="fas fa-sunrise"></i>
-                        <span>--</span>
-                    </div>
-                    <div class="sunset">
-                        <i class="fas fa-sunset"></i>
-                        <span>--</span>
+                    <div class="sun-times">
+                        <div class="sunrise">
+                            <i class="fas fa-sunrise"></i>
+                            <span>--</span>
+                        </div>
+                        <div class="sunset">
+                            <i class="fas fa-sunset"></i>
+                            <span>--</span>
+                        </div>
                     </div>
                 </div>
             </div>
-    </div>
 
-    <!-- div class="uv-card">
+            <!-- div class="uv-card">
                 <h3>UV Index</h3>
                 <div class="uv-display">
                     <div class="uv-value">3.5</div>
@@ -167,53 +167,43 @@
                 </div>
             </div> -->
 
-    <div class="forecast-card">
-        <h3>5-Day Forecast</h3>
-        <div class="forecast-list">
-            <div class="forecast-item">
-                <span class="day">--</span>
-                <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
-                <span class="temp">--</span>
+            <div class="forecast-card">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-list">
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="day">--</span>
+                        <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
+                        <span class="temp">--</span>
+                    </div>
+                </div>
             </div>
-            <div class="forecast-item">
-                <span class="day">--</span>
-                <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
-                <span class="temp">--</span>
-            </div>
-            <div class="forecast-item">
-                <span class="day">--</span>
-                <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
-                <span class="temp">--</span>
-            </div>
-            <div class="forecast-item">
-                <span class="day">--</span>
-                <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
-                <span class="temp">--</span>
-            </div>
-            <div class="forecast-item">
-                <span class="day">--</span>
-                <!-- <img src="/api/placeholder/40/40" alt="Weather"> -->
-                <span class="temp">--</span>
-            </div>
-        </div>
-    </div>
-    </aside>
+        </aside>
     </div>
     <div class="watermark">
         Created with ❤️ by
         <a href="">SGcpu</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="config.js"></script>
-    <script>
-        const apiKey = CONFIG.API_KEY;
-
-        fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=New York`)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error("Error fetching weather:", error));
-    </script>
-
     <script src="app.js"></script>
 </body>
 

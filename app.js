@@ -1,4 +1,9 @@
 
+const CONFIG = {
+    API_KEY: '', // Replace with your API key
+    BASE_URL: 'https://api.openweathermap.org/data/2.5',
+    UNITS: 'metric'
+};
 
 class WeatherDashboard {
     constructor() {
