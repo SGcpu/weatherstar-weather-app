@@ -81,7 +81,7 @@ class WeatherDashboard {
                 this.showError('City not found. Please check the spelling and try again.');
             }
         } catch (error) {
-            this.showError('Failed to search city. Please try again.');
+            this.showError('Add your API key and Try Again!');
         }
     }
 
